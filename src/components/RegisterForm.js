@@ -32,9 +32,6 @@ const RegisterForm = ({changeForm}) => {
       firebase
         .auth()
         .createUserWithEmailAndPassword(formData.email, formData.password)
-        .then(() => {
-          console.log('Account created');
-        })
         .catch(() => {
           setFormError({
             email: true,
